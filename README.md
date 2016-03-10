@@ -17,13 +17,10 @@ The following are the instructions for running the R script:
 
 5. Run the script in RStudio using command: source("run_analysis.R")
 
-6. On completion of script running the following three files will be generated in the "UCI HAR Dataset" folder:
+6. On completion of script running the following two files will be generated in the "UCI HAR Dataset" folder:
 
-(i) Merged.txt
-Merged data set comprising of both the training and the test sets.
-
-(ii) Merged1.txt
+(i) Merged1.txt
 Independent tidy data set with the average of each variable for each activity and each subject
 
-(iii) Merged2.txt
+(ii) Merged2.txt
 Independent tidy data set with the standard deviation (SD) of each variable for each activity and each subject
