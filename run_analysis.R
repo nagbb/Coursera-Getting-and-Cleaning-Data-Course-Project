@@ -105,7 +105,6 @@ colnames(train_total_acc_z) <- "average_train_total_acc_z"
 
 # 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 Merged1<-cbind(test_body_acc_x,test_body_acc_y,test_body_acc_z,test_body_gyro_x,test_body_gyro_y,test_body_gyro_z,test_total_acc_x,test_total_acc_y,test_total_acc_z,train_body_acc_x,train_body_acc_y,train_body_acc_z,train_body_gyro_x,train_body_gyro_y,train_body_gyro_z,train_total_acc_x,train_total_acc_y,train_total_acc_z)
-write.table(Merged1,file="Merged1.txt")
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 # Extracts the SD for each measurement to a data frame separately for each activity and each feature
@@ -150,4 +149,7 @@ colnames(SD_train_total_acc_z) <- "SD_train_total_acc_z"
 
 # 5.From the data set in step 4, creates a second, independent tidy data set with the SD of each variable for each activity and each subject.
 Merged2<-cbind(SD_test_body_acc_x,SD_test_body_acc_y,SD_test_body_acc_z,SD_test_body_gyro_x,SD_test_body_gyro_y,SD_test_body_gyro_z,SD_test_total_acc_x,SD_test_total_acc_y,SD_test_total_acc_z,SD_train_body_acc_x,SD_train_body_acc_y,SD_train_body_acc_z,SD_train_body_gyro_x,SD_train_body_gyro_y,SD_train_body_gyro_z,SD_train_total_acc_x,SD_train_total_acc_y,SD_train_total_acc_z)
-write.table(Merged2,file="Merged2.txt")
+
+Tidydataset<-cbind(Merged1,Merged2)
+
+write.table(Tidydataset,file="Tidydataset.txt")
